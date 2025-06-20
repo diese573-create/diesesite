@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+   <!-- Header sticky -->
+   <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+      <div class="site-title">Dièse Junior Conseil</div>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <h1>Contactez-nous</h1>
+
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="merci.html"
+      class="contact-form"
+      novalidate
+    >
+      <!-- Champ caché Netlify -->
+      <input type="hidden" name="form-name" value="contact" />
+      <!-- Champ anti-spam -->
+      <p hidden>
+        <label>Ne pas remplir si humain : <input name="bot-field" /></label>
+      </p>
+
+      <div class="form-group">
+        <label for="societe">Société *</label>
+        <input type="text" id="societe" name="societe" required />
+      </div>
+
+      <div class="form-group">
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="sujet">Sujet *</label>
+        <input type="text" id="sujet" name="sujet" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="comment">Comment avez-vous entendu parler de Dièse? *</label>
+        <select id="comment" name="comment" required>
+          <option value="" disabled selected hidden>-- Sélectionnez une option --</option>
+          <option value="alumni">Alumni ENSIIE</option>
+          <option value="internet">Recherche Internet</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="bouche_a_oreille">Bouche à oreille</option>
+          <option value="evenement">Partenaire</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img/logo.png" alt="Logo Dièse" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      <p class="footer-address">1 Square de la résistance, 91000 Evry, France</p>
+      <a href="mentions.html" class="legal-button">Mentions légales</a>
+    </div>
+  </footer> 
+
+  <canvas id="network-bg"></canvas>  
+  <script src="js/network-bg.js"></script>
+
+</body>
+</html>

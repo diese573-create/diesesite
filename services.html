@@ -1,0 +1,73 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- Header sticky -->
+   <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+      <div class="site-title">Dièse Junior Conseil</div>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <h1>Offres de prestation</h1>
+    <div class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <img src="img/service1.jpg" alt="Service 1" class="active">
+          <img src="img/service2.jpg" alt="Service 2">
+          <img src="img/service3.jpg" alt="Service 3">
+          <img src="img/service4.jpg" alt="Service 4">
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="img/logo.png" alt="Logo Dièse" class="footer-logo">
+    </div>
+    <div class="footer-right">
+      <p class="footer-address">1 Square de la résistance, 91000 Evry, France</p>
+      <a href="mentions.html" class="legal-button">Mentions légales</a>
+    </div>
+  </footer> 
+  <script>
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const images = document.querySelectorAll('.carousel-images img');
+    let currentIndex = 0;
+  
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+  
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+  
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+  </script>
+  <canvas id="network-bg"></canvas>   
+  
+  
+</body>
+</html>
