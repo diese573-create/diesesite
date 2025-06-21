@@ -147,7 +147,6 @@
   /* Titre blanc pur */
   .page-content h1 {
     color: #ffffff; /* blanc pur */
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   }
 /* Conteneur boutons en bas */
 .action-buttons-container {
