@@ -156,11 +156,6 @@
     margin: 0 auto 40px auto;
   }
   
-  .first-page strong {
-    font-weight: bold;
-    color: #FFD700; /* Jaune doré pour mettre en valeur les mots-clés */
-  }
-  
   /* Page Content Styling */
   .page-content {
     padding: 6rem 1rem 4rem;
