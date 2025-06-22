@@ -26,7 +26,6 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* transparence douce */
   backdrop-filter: blur(10px); /* effet de flou derrière pour lisibilité */
   color: #083787;
   z-index: 1000;
