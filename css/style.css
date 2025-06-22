@@ -136,32 +136,25 @@
   }
 
   .hero {
-    background-color: none; /* bleu foncé fallback */
-    color: white;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; /* aligne le contenu à gauche */
     padding: 100px 60px;
     min-height: 100vh;
-    box-sizing: border-box;
+    background-color: #001f3f;
   }
   
-  .hero-content {
+  .hero .container {
+    text-align: left;
     max-width: 600px;
   }
-  
   .hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  
-  .hero p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    line-height: 1.5;
-  }
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }  
   
   /* Page Content Styling */
   .page-content {
