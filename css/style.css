@@ -427,7 +427,7 @@
   .partners img.highlight {
     width: 24%;
     max-width: 220px;
-    background: white;
+    background: none;
     padding: 1rem;
     border-radius: 20px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
@@ -438,8 +438,8 @@
     max-width: 900px;
     margin: 1.5rem auto;
     padding: 1.2rem 1.5rem;
-    background: white;
-    color: #0840a0;
+    background: none;
+    color: #ffffff;
     border-radius: 20px;
     font-size: 1.05rem;
     line-height: 1.6;
