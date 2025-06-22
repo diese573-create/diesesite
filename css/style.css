@@ -142,7 +142,6 @@
     height: 100vh;                 /* Toute la hauteur de l'écran */
     width: 100vw;                  /* Toute la largeur de l'écran */
     padding: 0 60px;
-    background-color: #001f3f;     /* Fond bleu foncé */
     color: white;
   }
   
@@ -158,7 +157,6 @@
     margin: 0;               /* Pas de centrage automatique */
     text-align: left;        /* Aligne le texte à gauche */
     position: relative;
-    z-index: 10;
     user-select: text;       /* Permet de sélectionner le texte */
   }
   
