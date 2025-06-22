@@ -50,7 +50,7 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 800;
-    color: #0840a0;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
   }
   
@@ -60,7 +60,7 @@
   }
   
   .site-nav a {
-    color: #0840a0;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -68,7 +68,7 @@
   }
   
   .site-nav a:hover {
-    color: #0b60d9;
+    color: black;
   }
   
   /* Responsive */
