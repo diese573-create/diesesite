@@ -152,14 +152,16 @@
   
   /* Page Content Styling */
   .page-content {
-    padding: 6rem 1rem 4rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left; /* aligner à gauche au lieu de centrer */
+    padding: 2rem 3rem;       /* Tu règles ton espace intérieur librement */
+    width: 100%;             /* Prends toute la largeur possible */
+    max-width: none;         /* Enlève la limite de largeur */
+    margin: 0;               /* Pas de centrage automatique */
+    text-align: left;        /* Aligne le texte à gauche */
     position: relative;
     z-index: 10;
-    user-select: text; /* autoriser la sélection */
+    user-select: text;       /* Permet de sélectionner le texte */
   }
+  
   /* Titre blanc pur */
   .page-content h1 {
     color: #ffffff; /* blanc pur */
@@ -205,6 +207,24 @@
     border-color: #0840a0;
     box-shadow: 0 0 20px rgba(8, 64, 160, 0.6);
   }
+  .action-buttons-container .btn-primary {
+    background-color: #0840a0; /* bleu primaire */
+    color: #fff;               /* texte blanc */
+    border: none;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 10px rgba(8, 64, 160, 0.2);
+    user-select: none;
+}
+
+.action-buttons-container .btn-primary:hover {
+    transform: scale(1.1);
+    background-color: #06307a;
+}
   
   /* Bouton Contactez-nous au centre */
   .action-buttons-container .btn-contact {
