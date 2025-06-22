@@ -8,75 +8,47 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
-// Configuration différente par section
-const sectionSettings = {
-  hero: {
-    bgColor: '#001f3f',
-    pointColor: '#23b9e6',
-  },
-  partners: {
-    bgColor: '#0b3d91',
-    pointColor: '#ffaa00',
-  },
-  process: {
-    bgColor: '#004080',
-    pointColor: '#00ffaa',
-  }
-};
-
-// Points et autres constantes
-let points = [];
-let maxPoints = 40;
-let maxDistance = 150;
+const points = [];
+const maxPoints = 40;       // moins de points
+const maxDistance = 150;
 
 function random(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-function initPoints() {
-  points = [];
-  for (let i=0; i<maxPoints; i++) {
-    points.push({
-      x: random(0, canvas.width),
-      y: random(0, canvas.height),
-      vx: random(-0.3, 0.3),
-      vy: random(-0.3, 0.3)
-    });
-  }
+// Initialiser les points
+for(let i=0; i<maxPoints; i++) {
+  points.push({
+    x: random(0, canvas.width),
+    y: random(0, canvas.height),
+    vx: random(-0.3, 0.3),
+    vy: random(-0.3, 0.3),
+  });
 }
 
-initPoints();
-
-// Section courante
-let currentSection = 'hero';
-
 function draw() {
-  const settings = sectionSettings[currentSection] || sectionSettings.hero;
-
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Fond
-  ctx.fillStyle = settings.bgColor;
+  // Fond bleu moins foncé
+  ctx.fillStyle = '#083787';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Points
   points.forEach(p => {
     ctx.beginPath();
     ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
-    ctx.fillStyle = settings.pointColor;
-    ctx.shadowColor = settings.pointColor;
+    ctx.fillStyle = '#23b9e6'; 
+    ctx.shadowColor = '#23b9e6';
     ctx.shadowBlur = 8;
     ctx.fill();
   });
 
-  // Lignes entre points proches
   for(let i=0; i<maxPoints; i++) {
     for(let j=i+1; j<maxPoints; j++) {
       const p1 = points[i];
       const p2 = points[j];
       const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
       if(dist < maxDistance) {
-        ctx.strokeStyle = `rgba(255,255,255, ${(maxDistance - dist) / maxDistance * 0.8})`;
+        ctx.strokeStyle = `rgba(240, 240, 240, ${(maxDistance - dist) / maxDistance * 0.8})`; // blanc cassé semi-transparent
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(p1.x, p1.y);
@@ -86,7 +58,6 @@ function draw() {
     }
   }
 
-  // Déplacement points
   points.forEach(p => {
     p.x += p.vx;
     p.y += p.vy;
@@ -98,23 +69,6 @@ function draw() {
 }
 
 draw();
-
-// Observer pour détecter la section visible
-const sections = document.querySelectorAll('section[id]');
-const observerOptions = { threshold: 0.6 };
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      currentSection = entry.target.id;
-      // Réinitialiser points pour chaque changement si tu veux
-      initPoints();
-    }
-  });
-}, observerOptions);
-
-sections.forEach(section => observer.observe(section));
-
 
 
 const images = document.querySelectorAll('.partners img');
