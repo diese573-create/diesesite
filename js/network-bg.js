@@ -36,7 +36,7 @@ function draw() {
   points.forEach(p => {
     ctx.beginPath();
     ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
-    ctx.fillStyle = '#23b9e6'; // blanc cassé pour points
+    ctx.fillStyle = '#23b9e6'; 
     ctx.shadowColor = '#23b9e6';
     ctx.shadowBlur = 8;
     ctx.fill();
