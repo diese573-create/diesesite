@@ -23,7 +23,7 @@
   /* Sticky Header */
 /* Sticky Header avec fond transparent */
 .site-header {
-  position: sticky;
+  position: static;
   top: 0;
   width: 100%;
   backdrop-filter: blur(10px); /* effet de flou derrière pour lisibilité */
