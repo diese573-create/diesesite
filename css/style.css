@@ -137,34 +137,28 @@
 
   .hero {
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* aligne le contenu à gauche */
-    padding: 100px 60px;
-    min-height: 100vh;
-    background-color: #001f3f;
+    align-items: center;           /* Centre verticalement */
+    justify-content: flex-start;   /* Aligne le contenu à gauche */
+    height: 100vh;                 /* Toute la hauteur de l'écran */
+    width: 100vw;                  /* Toute la largeur de l'écran */
+    padding: 0 60px;
+    background-color: #001f3f;     /* Fond bleu foncé */
+    color: white;
   }
   
-  .hero .container {
-    text-align: left;
+  .hero .content {
     max-width: 600px;
   }
-  .hero h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }  
   
   /* Page Content Styling */
   .page-content {
     padding: 6rem 1rem 4rem;
     max-width: 900px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left; /* aligner à gauche au lieu de centrer */
     position: relative;
     z-index: 10;
-    user-select: none;
+    user-select: text; /* autoriser la sélection */
   }
   /* Titre blanc pur */
   .page-content h1 {
