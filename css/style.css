@@ -123,7 +123,7 @@
   
   .legal-button {
     background-color: #ffffff;
-    color: #003366;
+    color: #0840a0;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
@@ -135,25 +135,25 @@
     background-color: #cce5ff;
   }
 
-  .first-page {
-    background-color: #001f3f; /* bleu foncé */
-    color: white;
-    padding: 80px 20px;
+  .hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    padding: 120px 20px;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  
-  .first-page h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-weight: bold;
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
   }
-  
-  .first-page h2 {
-    font-size: 1.3em;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
+  .hero .btn.primary {
+    background-color: #0840a0;
+    color: white;
+    padding: 16px 32px;
+    font-size: 1.2em;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  .hero .btn.primary:hover {
+    background-color: #0840a0;
   }
   
   /* Page Content Styling */
