@@ -157,6 +157,7 @@
     margin: 0;               /* Pas de centrage automatique */
     text-align: left;        /* Aligne le texte à gauche */
     position: relative;
+    z-index: 100;             /* Au-dessus du canvas */
     user-select: text;       /* Permet de sélectionner le texte */
   }
   
