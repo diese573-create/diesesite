@@ -23,9 +23,12 @@
   /* Sticky Header */
 /* Sticky Header avec fond transparent */
 .site-header {
+  position: relative; /* ✅ Ajout nécessaire */
   top: 0;
   width: 100%;
-  backdrop-filter: blur(10px); /* effet de flou derrière pour lisibilité */
+  backdrop-filter: blur(10px); /* effet de flou derrière */
+  background-color: rgba(255, 255, 255, 0.6); /* ✅ Ajoute un fond visible */
+  color: #083787;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
