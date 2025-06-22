@@ -21,16 +21,19 @@
   }
   
   /* Sticky Header */
-  .site-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    color: #083787;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
-  }
+/* Sticky Header avec fond transparent */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* transparence douce */
+  backdrop-filter: blur(10px); /* effet de flou derrière pour lisibilité */
+  color: #083787;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
   
   .site-header .container {
     display: flex;
